@@ -1,7 +1,7 @@
 // import axios from "axios"
-import {Provider} from "react-redux"
-import store from "./store"
-import RestaurantScreen from "./components/RestaurantScreen"
+import {Provider} from 'react-redux'
+import store from './store'
+import RestaurantScreen from './components/RestaurantScreen'
 
 const App = () => {
   // console.log(process.env.REACT_APP_API_KEY)
