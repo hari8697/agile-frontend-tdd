@@ -1,4 +1,6 @@
 // import axios from "axios"
+import {Provider} from "react-redux"
+import store from "./store"
 import RestaurantScreen from "./components/RestaurantScreen"
 
 const App = () => {
@@ -14,10 +16,12 @@ const App = () => {
   // }
 
   return (
-    <div>
-      Hello, world.
-      <RestaurantScreen />
-    </div>
+    <Provider store={store}>
+      <div>
+        Hello, world.
+        <RestaurantScreen />
+      </div>
+    </Provider>
   )
 }
 
