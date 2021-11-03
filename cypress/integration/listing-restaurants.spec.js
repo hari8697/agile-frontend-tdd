@@ -2,17 +2,19 @@ describe("Listing Restaurants", () => {
   it("shows restaurants from the server", () => {
     const sushiPlace = "Sushi Place"
     const pizzaPlace = "Pizza Place"
-    const api_key = Cypress.env("api_key")
+    // const api_key = Cypress.env("api_key")
 
     cy.server({force404: true})
 
     cy.route({
       method: "GET",
-      url: `https://outside-in-dev-api.herokuapp.com/${api_key}/restaurants`,
+      url: `https://outside-in-dev-api.herokuapp.com/${Cypress.env(
+        "api_key"
+      )}/restaurants`,
       response: [
         {id: 1, name: sushiPlace},
-        {id: 2, name: pizzaPlace},
-      ],
+        {id: 2, name: pizzaPlace}
+      ]
     })
 
     cy.visit("/")

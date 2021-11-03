@@ -1,4 +1,5 @@
 // import axios from "axios"
+import RestaurantScreen from "./components/RestaurantScreen"
 
 const App = () => {
   // console.log(process.env.REACT_APP_API_KEY)
@@ -12,7 +13,12 @@ const App = () => {
   //     .then(response => console.log(response.data))
   // }
 
-  return <div>Hello, world.</div>
+  return (
+    <div>
+      Hello, world.
+      <RestaurantScreen />
+    </div>
+  )
 }
 
 export default App
