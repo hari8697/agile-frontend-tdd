@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# Agile Frontend Development
+
+This is an app made while learning test-driven development from this guide: https://outsidein.dev/
+
+### About the app
+
+An app for tracking reviews of dishes at different restaurants.
+
+Production: https://agile-frontend-tdd.netlify.app/
+
+Dependencies are locked with a `yarn.lock` file, so please use `yarn` and not `npm` for installing them.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
