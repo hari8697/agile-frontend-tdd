@@ -13,6 +13,7 @@ describe('RestaurantList', () => {
     const props = {
       loadRestaurants: jest.fn().mockName('loadRestaurants'),
       loading: false,
+      loadError: false,
       restaurants,
       ...propOverrides
     }
@@ -46,6 +47,22 @@ describe('RestaurantList', () => {
       const {queryByText} = context
       expect(queryByText('Sushi Place')).not.toBeNull()
       expect(queryByText('Pizza Place')).not.toBeNull()
+    })
+
+    it('does not display the error message', () => {
+      const {queryByText} = context
+      expect(queryByText('Restaurants could not be loaded.')).toBeNull()
+    })
+  })
+
+  describe('when loading fails', () => {
+    beforeEach(() => {
+      renderWithProps({loadError: true})
+    })
+
+    it('displays the error message', () => {
+      const {queryByText} = context
+      expect(queryByText('Restaurants could not be loaded.')).not.toBeNull()
     })
   })
 })
