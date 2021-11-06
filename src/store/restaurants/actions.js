@@ -25,7 +25,7 @@ const startLoading = () => ({ type: START_LOADING })
 const recordLoadingError = () => ({ type: RECORD_LOADING_ERROR })
 
 export const createRestaurant = (name) => (dispatch, getState, api) => {
-  api.createRestaurant(name).then((record) => {
+  return api.createRestaurant(name).then((record) => {
     dispatch(addRestaurant(record))
   })
 }
