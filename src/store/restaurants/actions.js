@@ -19,6 +19,8 @@ const storeRestaurants = (records) => ({
   records,
 })
 
+export const createRestaurant = () => () => {}
+
 const startLoading = () => ({ type: START_LOADING })
 
 const recordLoadingError = () => ({ type: RECORD_LOADING_ERROR })
